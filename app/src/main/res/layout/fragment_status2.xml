@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:id="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/body_small_100"/>
+
+            <LinearLayout
+                android:id="@+id/pangkat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignTop="@+id/body"
+                android:layout_toRightOf="@+id/body"
+                android:layout_toEndOf="@+id/body">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/sersan_mayor_pdu_staff_50x58"/>
+
+                <TextView
+                    android:id="@+id/rank_judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hit_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/pangkat"
+                android:layout_toRightOf="@+id/body">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/hit_points"/>
+
+                <TextView
+                    android:id="@+id/hp_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/hp_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hit_points"
+                android:layout_toRightOf="@+id/body"
+                android:layout_toEndOf="@+id/body"
+                android:max="100"/>
+
+            <LinearLayout
+                android:id="@+id/ammunition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/hp_seekbar"
+                android:layout_toRightOf="@+id/body"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/ammunition"/>
+
+                <TextView
+                    android:id="@+id/ammo_value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/ammo_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ammunition"
+                android:layout_toRightOf="@+id/body"
+                android:layout_toEndOf="@+id/body"
+                android:max="100"/>
+
+            <!-- Bagian untuk Keahlian -->
+            <LinearLayout
+                android:id="@+id/skill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/body"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/border"
+                    android:padding="5dp"
+                    android:textColor="@color/grey"
+                    android:text="@string/skill"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:padding="5dp">
+
+                    <TableLayout
+                        android:id="@+id/table_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+                    </TableLayout>
+                </RelativeLayout>
+
+            </LinearLayout> <!-- Akhir bagian untuk Keahlian -->
+
+            <!-- Bagian untuk Informasi Prajurit -->
+            <TextView
+                android:id="@+id/my_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:layout_below="@+id/skill"
+                android:textColor="@color/grey"
+                android:text="@string/my_info"/>
+
+            <TableLayout
+                android:id="@+id/table_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:layout_below="@+id/my_info_text"
+                android:layout_gravity="fill_vertical"
+                android:shrinkColumns="1"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/identity"/>
+
+                    <TextView
+                        android:id="@+id/id_soldier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/name"/>
+
+                    <TextView
+                        android:id="@+id/name_soldier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/gender"/>
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/born_date"/>
+
+                    <TextView
+                        android:id="@+id/born_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/rank"/>
+
+                    <TextView
+                        android:id="@+id/rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/division"/>
+
+                    <TextView
+                        android:id="@+id/division"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/headquarters"/>
+
+                    <TextView
+                        android:id="@+id/headquarters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/academy"/>
+
+                    <TextView
+                        android:id="@+id/academy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"
+                        android:text="@string/address"/>
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout> <!-- Akhir bagian untuk Informasi Prajurit -->
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/table_info"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:text="@string/developers"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

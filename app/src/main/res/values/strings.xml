@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BMS 3</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Maps</string>
+    <string name="title_menu_utama">Main Menu</string>
+    <string name="chat">Chat</string>
+    <string name="status">My Status</string>
+    <string name="about">About</string>
+
+    <string name="hit_points">Hit Points :</string>
+    <string name="ammunition">Ammunition :</string>
+    <string name="skill">Skills</string>
+    <string name="my_info">My Info</string>
+    <string name="identity">ID</string>
+    <string name="name">Name</string>
+    <string name="born_date">Born Date</string>
+    <string name="gender">Gender</string>
+    <string name="rank">Rank</string>
+    <string name="division">Division</string>
+    <string name="headquarters">Headquarters</string>
+    <string name="academy">Academy</string>
+    <string name="address">Address</string>
+    <string name="developers">\@BMS_Lumachrome</string>
+    <string name="google_maps_key">AIzaSyAaB9tSXTFlxvroLUTodgRoTdkK7R_G5io</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_pass">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="send">SEND</string>
+    <string name="type_your_message_here_">Type your message here...</string>
+</resources>
