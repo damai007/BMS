@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <!-- Karena menggunakan appcompat maka harus memakai app:showAsAction -->
+
+    <item android:id="@+id/menu_chat"
+        app:actionLayout="@layout/action_bar_notification_icon"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/chat_icon_small_35_white"
+        android:title="@string/chat" />
+
+    <item android:id="@+id/menu_status"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/user_info_icon_small_35_white"
+        android:title="@string/status"/>
+
+    <item android:id="@+id/menu_about"
+        app:showAsAction="ifRoom"
+        android:title="@string/about" />
+</menu>

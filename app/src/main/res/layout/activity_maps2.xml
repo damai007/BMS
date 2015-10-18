@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.yanagihisato.bmsapplication.maps2Activity">
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/maps"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottombox"
+        android:gravity="center|bottom">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/StatusbarLatLing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#95000000"
+            android:gravity="center|bottom|fill_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/Latitude"
+                android:gravity="right"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/Longitude"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                android:textIsSelectable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:id="@+id/chatbox"
+            android:background="#95000000"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/messagebox"
+                android:layout_weight="0.94"
+                android:background="@drawable/edittext_rounded_corners"
+                android:visibility="gone"
+                android:paddingRight="20dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:id="@+id/sendbtn"
+                android:background = "@drawable/roundedbutton"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:height="15dp"
+                android:width="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
